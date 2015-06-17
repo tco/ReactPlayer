@@ -1,0 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $white;
+    font-size: 100%; //16px on most browsers
+}
+
+.hidden {
+    display: none !important;
+}

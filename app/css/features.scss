@@ -1,0 +1,9 @@
+@import 'reset';
+@import 'variables';
+@import 'main';
+
+/* inject:scss */
+@import "../features/player/player.scss";
+@import "../features/player/controls/controls.scss";
+@import "../features/player/video/video.scss";
+/* endinject */
