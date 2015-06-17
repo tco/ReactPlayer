@@ -108,9 +108,9 @@ gulp.task('build-index', ['clean', 'build-styles', 'build-js'], function() {
         }))
         .pipe(inject(gulp.src('dist/scripts/app.js', { read: false }), {
             starttag: '<!-- inject:features:{{ext}} -->',
-            ignorePath: '/dist/',
+            ignorePath: argv.production ? '/dist/': '',
             transform: function(filepath) {
-                return '<script type="text/javascript" src="/dist' + filepath + '?v=' + hash + '"></script>';
+                return '<script type="text/javascript" src="' + filepath + '?v=' + hash + '"></script>';
             }
         }))
         .pipe(gulpif(!argv.production, inject(gulp.src('dist/scripts/app.js', { read: false }), {

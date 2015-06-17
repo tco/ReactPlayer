@@ -7,7 +7,7 @@ var ReactPlayer = React.createClass({
     render: function() {
         return (
             <div id="react-player" onMouseOver={this.showControls} onMouseOut={this.hideControls}>
-                <Video ref="Video" src={this.props.src} subtitleSource={this.props.subtitleSource} />
+                <Video ref="Video" src={this.props.src} />
                 <Controls ref="Controls" playPauseClick={this.playPauseClick} />
             </div>
         );
